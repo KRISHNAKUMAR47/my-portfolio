@@ -12,13 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     
 <!--header design-->
 <header>
-    <a href="#" class="logo" >Cod<span>e</span>r.</a>
+    <a href="#" class="logo" >kri<span>sh</span>na.</a>
 
     <ul class="navlist">
         <li><a href="#home" class="active">Home</a></li>
@@ -44,7 +44,7 @@
         <P>Web developer I can provide clean code for web design <br> A responsive design makes your website accessible to all user.</P>
         <div class="button">
             <a href="#" class="btn">Let's Talk</a>
-            <a href="#" class="btn3">Resume</a>
+            <a href="img/MERN STACK DEVELOPER INTERN (1).pdf" download class="btn3">Resume</a>
             <a href="#" class="btn2"><span><i class='bx bx-play'></i></span>Watch My Work</a>
         </div>
     </div>
@@ -77,10 +77,19 @@
     </div>
     <div class="projects-content">
         <div class="row">
-            <img src="img/pexels-pixabay-414144.jpg">
+            <img src="img/netflixx clone.png">
             <div class="layer">
-            <h5>Web Design</h5>
-            <p>check out 10 best design's update for the top web design & Development companies.</p>
+            <h5 style="color: firebrick;">Netflix-clone</h5>
+            <p>check out </p>
+            <a href="https://krishnakumar47.github.io/Netflix-clone/"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="img/login.jpg">
+            <div class="layer">
+            <h5>log node</h5>
+            <p>check out.</p>
             <a href="#"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
@@ -95,15 +104,6 @@
         </div>
 
         <div class="row">
-            <img src="img/pexels-andrea-piacquadio-775279.jpg">
-            <div class="layer">
-            <h5>Web Design</h5>
-            <p>check out 10 best design's update for the top web design & Development companies.</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-            </div>
-        </div>
-
-        <div class="row">
             <img src="img/pexels-pixabay-414144.jpg">
             <div class="layer">
             <h5>Web Design</h5>
@@ -111,16 +111,8 @@
             <a href="#"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
-
-        <div class="row">
-            <img src="img/pexels-pixabay-414144.jpg">
-            <div class="layer">
-            <h5>Web Design</h5>
-            <p>check out 10 best design's update for the top web design & Development companies.</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-            </div>
-        </div>
-    </div>
+</div>
+    <a href="#" class="btn5">See More</a>
 </section>
 
 <!--contact section design-->
@@ -130,24 +122,24 @@
         <h4>If you Have Any Project In your Mind</h4>
         <p>I'm a MERN STACK Developer- creating  a static Website design for companies all across the world</p>
         <div class="list">
-            <li><a href="#">+918289928047</a></li>
-            <li><a href="#">kk699236@gmailcom</a></li>
+            <li><a href="#"><i class="bx bx-phone-call"></i> +918289928047</a></li>
+            <li><a href="#"><i class="bx bxl-mail"></i> kk699236@gmail.com</a></li>
         </div>
 
         <div class="contact-icons">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="https://facebook.com/"><i class='bx bxl-facebook'></i></a>
             <a href="https://github.com/KRISHNAKUMAR47"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="https://instagram.com/"><i class='bx bxl-instagram'></i></a>
             <a href="https://www.linkedin.com/in/krishna-kumar-a27bb0272/"><i class='bx bxl-linkedin'></i></a>
         </div>
     </div>
 
     <div class="contact-form">
-      <form action="">
-        <input type="name" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email Address" required>
-        <input type="" placeholder="Your Mobile Number" required>
-        <textarea name="" id="" cols="35" rows="10" placeholder="How can I Help You" required></textarea>
+      <form id="submit-form" action="" >
+        <input type="name" placeholder="Your Name" name="name" required>
+        <input type="email" placeholder="Your Email Address" name="email" required>
+        <input type="phn" placeholder="Your Mobile Number" name="phn" required>
+        <textarea  cols="35" rows="10" placeholder="write something..." name="message" required></textarea>
         <input type="submit" value="Send Message" class="submit" required>
       </form>
     </div>
@@ -164,6 +156,26 @@
     </div>
 
 </section>
+
+<script>
+    $("#submit-form").submit((e)=>{
+    e.preventDefault()
+    $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbxqtm-kJhHmQARFjebPIGF0oIm-VPno2NZR8pYlNxYg5BQ1N9teSLmxFpyiBevTB9LP/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            //window.location.href="https://google.com"
+        },
+        error:function (err){
+            alert("Something Error")
+
+        }
+    })
+})
+</script>
 
 <!--custom js link-->
 <script type="text/javascript" src="script.js"></script>
