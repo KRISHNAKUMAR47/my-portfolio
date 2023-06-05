@@ -1,9 +1,9 @@
 const header = document.querySelector("header");
 window.addEventListener ("scroll",function(){
-    header.classList.toggle ("stickey",window.scrollY > 100);
+    header.classList.toggle ("sticky", window.scrollY > 100);
 });
 
-let menu = document.querySelector('menu-icon');
+let menu = document.querySelector('#menu-icon');
 let navlist  = document.querySelector('.navlist');
 
 menu.onclick = () => {

@@ -114,7 +114,7 @@ section{
 .home-text h3{
     color: var(--text-color);
     margin: 0 0 35px;
-    font-size: 2rem;
+    font-size: 2+rem;
     font-weight: 700;
     line-height: 1.1;
 }
@@ -486,7 +486,7 @@ form textarea{
     }
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1024px){
     :root{
         --big-font: 4rem;
         --h2-font: 2.5rem;
@@ -519,13 +519,13 @@ form textarea{
     }
 }
 
-@media (max-width: 700px){
+@media (max-width: 600px){
     #menu-icon{
-        display: block;
+        display:block;
     }
     .navlist{
         position: absolute;
-        top: -1000%;
+        top: -1000px;
         right: 0;
         left: 0;
         display: flex;
@@ -548,7 +548,7 @@ form textarea{
         color: var(--text-color);
     }
     .navlist.open{
-        top: 100%;
+        top: 100px;
     }
 }
      

@@ -247,7 +247,7 @@ h3{
     animation: fillBars 2.5s 1;
 }
 
-.skill-per::before{
+.skill-per::before{ 
     content: attr(per);
     position: absolute;
     padding: 4px 6px;
